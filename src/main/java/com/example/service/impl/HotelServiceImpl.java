@@ -57,7 +57,6 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public void delete(int id) {
-
         hotelDao.delete(id);
     }
 

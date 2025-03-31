@@ -1,4 +1,5 @@
 package com.example.dto;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -7,6 +8,8 @@ public class HotelDto {
     private Integer id;
     private String name;
     private String location;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createDate;
 
     public HotelDto(){}

@@ -96,6 +96,7 @@ public class HotelDaoImpl implements HotelDao {
             PreparedStatement ps=con.prepareStatement(HotelSqlQuery.UPDATE_HOTEL_BY_ID);
             ps.setString(1,name);
             ps.setInt(2,id);
+            ps.executeUpdate();
             LoggerHelper.info("Name updated successfully");
         } catch (Exception e) {
             LoggerHelper.error("Error patching student: " + e.getMessage());
