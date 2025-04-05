@@ -46,7 +46,7 @@ public class HotelController extends HttpServlet {
         HotelDto hotel=objectMapper.readValue(br,HotelDto.class);
         hotelService.saveHotel(hotel);
         resp.setStatus(HttpServletResponse.SC_CREATED);
-        resp.getWriter().write("{\"message\":\"Student saved successfully\"}");
+        resp.getWriter().write("{\"message\":\"Hotel saved successfully\"}");
     }
 
     public void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -56,7 +56,7 @@ public class HotelController extends HttpServlet {
             hotelService.update(hotelDto);
             resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_OK);
-            resp.getWriter().write("{\"message\": \"Student updated successfully\"}");
+            resp.getWriter().write("{\"message\": \"Hotel updated successfully\"}");
         }
     }
 
@@ -64,6 +64,6 @@ public class HotelController extends HttpServlet {
         int id=Integer.parseInt(req.getParameter("id"));
         hotelService.delete(id);
         resp.setStatus(HttpServletResponse.SC_OK);
-        resp.getWriter().write("{\"message\": \"Student deleted successfully\"}");
+        resp.getWriter().write("{\"message\": \"Hotel deleted successfully\"}");
     }
 }
