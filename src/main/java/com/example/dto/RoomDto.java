@@ -1,13 +1,19 @@
 package com.example.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 
 public class RoomDto {
     private Integer id;
+
+    @JsonProperty("hotel_id")
     private Integer hotelId;
+
+    @JsonProperty("room_number")
     private String roomNumber;
+
     private Double price;
     private String status;
 
@@ -22,6 +28,8 @@ public class RoomDto {
         this.status = status;
         this.createDate = createDate;
     }
+
+    public RoomDto(){}
 
     public Integer getId() {
         return id;

@@ -1,10 +1,10 @@
 package com.example.controller;
 
 import com.example.dto.RoomDto;
-import com.example.entity.Room;
 import com.example.service.RoomService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.List;
 
-public class RoomController {
+public class RoomController extends HttpServlet {
 
     private final RoomService roomService;
     private final ObjectMapper objectMapper=new ObjectMapper();
