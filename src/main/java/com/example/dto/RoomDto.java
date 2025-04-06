@@ -1,16 +1,20 @@
-package com.example.entity;
+package com.example.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
-public class Room {
+public class RoomDto {
     private Integer id;
     private Integer hotelId;
     private String roomNumber;
     private Double price;
     private String status;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createDate;
 
-    public Room(Integer id, Integer hotelId, String roomNumber, Double price, String status, LocalDateTime createDate) {
+    public RoomDto(Integer id, Integer hotelId, String roomNumber, Double price, String status, LocalDateTime createDate) {
         this.id = id;
         this.hotelId = hotelId;
         this.roomNumber = roomNumber;
@@ -18,8 +22,6 @@ public class Room {
         this.status = status;
         this.createDate = createDate;
     }
-
-    public Room() {}
 
     public Integer getId() {
         return id;
