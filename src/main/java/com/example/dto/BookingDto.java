@@ -10,8 +10,13 @@ public class BookingDto {
     private Integer roomId;
     private String customerName;
     private String customerEmail;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
+
     private String status;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
